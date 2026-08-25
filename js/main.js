@@ -197,7 +197,7 @@ document.getElementById("complete-order-btn").addEventListener("click", function
 
 // if user chooses to politely leave the restaurant, change background image and display polite message
 document.getElementById("leave-restaurant").addEventListener("click", function() {
-    document.body.style.backgroundImage = "url('../img/background2.jpeg')";
+    document.body.style.backgroundImage = "url('./img/background2.jpeg')";
     document.getElementById("restaurant-box").style.display = "none";
     document.getElementById("new-navigation").style.display = "none";
     document.getElementById("goodbye-polite").style.display = "block";
