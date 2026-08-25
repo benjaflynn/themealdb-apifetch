@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../css/main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+
+        <title>Chef's Choice</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="welcome-text"><h1>Welcome to</h1></div>
+            <div id="restaurant-name"><h1>The Chef's Choice</h1></div>
+        </header>        
+
+        <div id="restaurant-box">
+
+            <div id="new-navigation">
+                <a id="navigation-left">Order here!</a> <span class="whitespace2">&nbsp;</span>
+                <a style="float:right" id="navigation-right">Check existing orders here!</a> <span class="whitespace2">&nbsp;</span>
+            </div>
+            
+            <br>
+
+            <hr id="menu-line">
+
+            <br>
+
+            <div id="menu-box">
+
+                <div id="order-here" class="restaurant-activity">
+
+                                       
+
+                    <p id="init-question">What main ingredient would you like for your dish to have?</p>
+
+                    <br>
+                    
+                    <form id="input-order-form">
+                        <input type="text" id="main-ingredient" placeholder="Please enter an ingredient"> <span class="whitespace">&nbsp;</span>
+                        <button id="ingredientBtn" onclick="submitIngredient()">Order</button>
+                    </form> 
+
+                    <br>
+
+                    <div class="dropdown" onmouseenter="activateDropdown()" onmouseleave="deactivateDropdown()">
+
+                        <div id="suggestIngredientBtn" class="dropbtn" style="display: inline-flex;"> Suggested ingredients &nbsp; <span id="triangle-left">&#x25B8;</span><span id="triangle-down" style="display: none;">&#x25BE;</span></div>
+                            
+                        <div class="dropdown-content" id="dropdown-suggestions">
+                            <span class="suggest-ingredient" id="chicken">Chicken</span>
+                            <span class="suggest-ingredient" id="beef">Beef</span>
+                            <span class="suggest-ingredient" id="turkey">Turkey</span>
+                            <span class="suggest-ingredient" id="lamb">Lamb</span>
+                            <span class="suggest-ingredient" id="tofu">Tofu</span>
+                            <span class="suggest-ingredient" id="aubergine">Aubergine</span>
+                            <span class="suggest-ingredient" id="leek">Leek</span>
+                            <span class="suggest-ingredient" id="potatoes">Potatoes</span>
+                            <span class="suggest-ingredient" id="vanilla">Vanilla</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="order-information" class="restaurant-activity" style="display: none;">
+                    <p>Excellent choice! Our chef suggests the <span id="title"></span>.</p>
+                    
+                    <div><img id="mealIMG"></img></div>
+                    
+                    <p>I will go ahead and order that for you.</p>
+                </div>
+
+                <div id="order-impossible" class="restaurant-activity" style="display: none;">
+                    <p>Unfortunately our chef has no experience with this ingredient. Would you like to choose something else?</p>
+                    
+                    <br>
+                    
+                    <p><button id="choose-other-ingredient" class="polite-btn">Yes please!</button><span class="whitespace3">&nbsp;</span>
+                    <button id="leave-restaurant" class="polite-btn">No thank you.</button></p>
+                    
+                    <p><button id="rude-choice"><a href="./rude.html">What do you mean, the chef has no experience with <span id="impossible-ingredient"></span>?! Unbelievable! I'm never coming here again!</a></button></p>
+                </div>
+
+                <div id="check-orders" class="restaurant-activity" style="display: none;">
+
+                    <div id="incomplete-orders">
+
+                        <p>Which order would you like to mark complete?</p>
+
+                        <br>
+
+                        <form id="complete-order-form">
+                            <input type="text" id="complete-order-number" name="complete-order" placeholder="Order #"> <span class="whitespace">&nbsp;</span>
+                            <button id="complete-order-btn">Submit</button>
+                        </form>
+
+                        <br>
+                    
+                        <p id="not-incomplete" style="font-weight: bold;"></p>
+
+                        <p id="incomplete-order-list"></p>
+
+                        <br>
+
+                    </div>
+
+                </div>
+            
+                <div id="credit-text" style="display: none;">
+                    <p><em>Restaurant background:</em><br>By Basile Morin - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=138211251</p>
+                    <p><em>Exit door background:</em><br>Basile Morin, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons</p>
+                    <p><em>Restaurant name font:</em><br>https://fonts.google.com/specimen/Monsieur+La+Doulaise?preview.script=Latn&query=monsieur+la+doulaise</p>
+                    <p><em>API:</em><br>https://www.themealdb.com</p>
+                    <p id="close-btn">Close</p>
+                </div>
+            
+            </div>
+        
+        </div>
+
+            <div id="goodbye-polite" class="restaurant-activity" style="display: none">
+                <p>Thank you for your patronage! Please come again!</p>
+
+                <br>
+
+                <button id="return">Come back inside?</button>
+            </div>
+
+        <footer>
+            <p id="credits" style="display: inline-block;">Credits</p>
+        </footer>
+        
+        <script src="../js/main.js"></script>
+    
+    </body>
+
+</html>

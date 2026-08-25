@@ -1,0 +1,323 @@
+/*
+The only thing I haven't been able to figure out is how to make the incompleted meals list scrollable 
+without some of it overflowing OUT of the restaurant box container on smaller screens. I'd rather the restaurant box grows with the list
+(so that one only has to scroll down one's phonescreen but stays in the container) but I can't figure that out.
+*/
+
+body {
+    background-image: url(../img/Restaurant_room_of_Amantaka_luxury_Resort_&_Hotel_in_Luang_Prabang_Laos.jpg);
+    background-size: cover;
+    background-color: lightslategrey;
+    background-attachment: fixed;
+}
+
+header, #goodbye-polite, #order-information, #order-impossible {
+    text-align: center;
+}
+
+.welcome-text {
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    color: aliceblue;
+}
+
+.welcome-text::before, .welcome-text::after {
+    flex: 1;
+    content: '';
+    background-color: aliceblue;
+    padding: 3px;
+    margin: 5px;
+}
+
+#restaurant-name {
+    font-size: 40px;
+    color: aliceblue;
+    margin-top: -3%;
+    font-family: 'Ballet', cursive;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+}
+
+#new-navigation {
+    font-size: 18px;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: sticky;
+}
+
+#navigation-left , #navigation-right {
+    padding: 0% 2% 1% 2%;
+}
+
+#navigation-left {
+    border-bottom: 2px solid seagreen;
+}
+
+#navigation-left:hover, #navigation-right:hover {
+    border-bottom: 2px solid darkgray;
+    cursor: pointer;
+}
+
+#restaurant-box {
+    width: 50%;
+    border: 2px solid darkgray;
+    border-radius: 12px;
+    padding: 50px;
+    background-color: rgb(233, 232, 232);
+    margin: auto;
+    height: 400px;
+}
+
+#menu-box {
+    max-height: 350px;
+}
+
+
+#order-here {
+    width: 50%;
+    margin: auto;
+}
+
+#check-orders {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    max-height: fit-content;
+}
+
+input[type=text] {
+    border: 2px solid darkgray;
+    background-color: rgb(233, 232, 232);
+    color: black;
+    border-radius: 12px;
+    padding: 12px 28px;
+}
+
+#mealIMG {
+    border: 5px solid darkgray;
+    border-radius: 5px;
+}
+
+#incomplete-order-list {
+    aspect-ratio: 3/1;
+    overflow: scroll;
+    padding-bottom: 20px;
+    height: 130px;
+    position: relative;
+    max-height: min-content;
+}
+
+#goodbye-polite {
+    width: 30%;
+    border: 2px solid darkgray;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: rgb(233, 232, 232);
+    margin-left: 35%;
+}
+
+button {
+    border-radius: 12px;
+    padding: 12px 28px;
+    background-color: lightgray;
+    border: transparent;
+}
+
+button:hover {
+    background-color: rgb(132, 190, 157);
+    cursor: pointer;
+}
+
+.polite-btn {
+    width: 20%;;
+    margin-inline: 10px;
+}
+
+.dropbtn {
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 16px;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    width: fit-content; 
+}
+
+.dropdown {
+    position: relative;
+    border-bottom: 2px solid transparent;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgray;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+    cursor: pointer;
+}
+
+.dropdown-content span {
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content span:hover {
+    background-color: rgb(132, 190, 157);
+}
+
+.dropdown:hover {
+    border-bottom: 2px solid darkgray;
+}
+
+#order-box-intern {
+    width: 50%;
+    margin: auto;
+}
+
+#credit-text {
+    margin-top: -5%;
+}
+
+#credits {
+    position: fixed;
+    bottom: 0;
+    padding: 5px;
+    background-color: rgb(233, 232, 232);
+    border: 2px solid darkgray;
+    border-radius: 12px;
+    margin-left: 50%;
+    margin-top: 150px;
+    font-size: smaller;
+    z-index: -1;
+}
+
+#credits:hover {
+    background-color: darkgray;
+}
+
+#close-btn {
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1370px) {
+    .whitespace {
+        display: block;
+    }
+
+    #restaurant-box {
+        width: 75%;
+        margin: auto;
+    }
+
+    #incomplete-order-list {
+        height: 150px;
+    }
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 970px) {
+
+    #restaurant-box {
+        width: 50vw;
+        margin: auto;
+        height: auto;
+        padding: 20x;
+
+    }
+
+    #menu-box {
+        width: 90%;
+        height: auto;
+        display: flex;
+        align-items: stretch;
+    }
+
+    #order-here {
+        width: 80%;
+        height: auto;
+    }
+
+    #check-orders {
+        width: 80%;
+        height: auto;
+        display: flex;
+        align-items: stretch;
+    }
+
+    #credits {
+        margin-top: 20vh;
+    }
+
+    .polite-btn {
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 810px) {
+
+    body {
+        background-attachment: fixed;
+        font-size: smaller;
+    }
+
+    #welcome-text {
+        font-size: 20px;
+    }
+
+    #restaurant-name {
+        font-size: 28px;
+    }
+
+    #new-navigation {
+        position: relative;
+        float: left;
+        font-size: 16px;
+    }
+
+    #menu-line {
+        margin-top: 120px;
+    }
+
+    #check-orders {
+        width: 80%;
+        height: fit-content;
+        display: flex;
+        align-items: stretch;
+    }
+
+    #incomplete-order-list {
+        font-size: 12px;
+        aspect-ratio: 2/1;
+        word-wrap: break-word;
+        width: 100%;
+        height: min-content;
+    }
+
+    .dropbtn {
+        font-size: 12px;
+    }
+
+    .whitespace2 {
+        display: block;
+    }
+
+    input[type=text] {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 692px) {
+    .whitespace3 {
+        display: block;
+    }
+}
