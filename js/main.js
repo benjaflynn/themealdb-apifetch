@@ -206,7 +206,7 @@ document.getElementById("leave-restaurant").addEventListener("click", function()
 
 // if user chooses to reenter the restaurant, display internal restaurant background image, remove goodbye message, and show order box again
 document.getElementById("return").addEventListener("click", function() {
-    document.body.style.backgroundImage = "url('../img/Restaurant_room_of_Amantaka_luxury_Resort_&_Hotel_in_Luang_Prabang_Laos.jpg')";
+    document.querySelector("body").style.backgroundImage = "url('https://benjaflynn.github.io/themealdb-apifetch/img/Restaurant_room_of_Amantaka_luxury_Resort_&_Hotel_in_Luang_Prabang_Laos.jpg')";
     document.getElementById("goodbye-polite").style.display = "none";
     document.getElementById("restaurant-box").style.display = "block";
     document.getElementById("new-navigation").style.display = "block";
