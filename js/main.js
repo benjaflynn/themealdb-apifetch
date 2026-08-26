@@ -197,7 +197,7 @@ document.getElementById("complete-order-btn").addEventListener("click", function
 
 // if user chooses to politely leave the restaurant, change background image and display polite message
 document.getElementById("leave-restaurant").addEventListener("click", function() {
-    document.querySelector("body").style.backgroundImage = "url('https://benjaflynn.github.io/themealdb-apifetch/img/background2.jpeg')";
+    document.querySelector("body").style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Wooden_gate_with_open_double_door_leading_to_the_garden_of_Isshinin_Buddhist_temple_in_the_compounds_of_Chion-in_Kyoto_Japan.jpg/3840px-Wooden_gate_with_open_double_door_leading_to_the_garden_of_Isshinin_Buddhist_temple_in_the_compounds_of_Chion-in_Kyoto_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail')";
     document.getElementById("restaurant-box").style.display = "none";
     document.getElementById("new-navigation").style.display = "none";
     document.getElementById("goodbye-polite").style.display = "block";
